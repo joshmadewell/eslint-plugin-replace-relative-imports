@@ -1,0 +1,14 @@
+{
+  "name": "eslint-plugin-replace-relative-imports",
+  "version": "1.0.0",
+  "description": "ESLint plugin which replaces relative imports with a defined alias",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"TDOO\" && exit 1"
+  },
+  "author": "Josh Madewell",
+  "license": "MIT",
+  "dependencies": {
+    "minimatch": "^3.0.4"
+  }
+}
