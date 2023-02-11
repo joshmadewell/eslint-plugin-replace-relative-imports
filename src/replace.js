@@ -76,11 +76,12 @@ function evaluateImport(node, config, context) {
 
     if (fullImportPath.startsWith(replaceDir)) {
       canFix = true;
+      const replacedImportPath = fullImportPath.replace(replaceDir, replaceWith).split(path.sep).join("/")
 
       context.report({
         messageId: 'can-replace',
         loc,
-        fix: fixer => fixer.replaceTextRange(range, `'${fullImportPath.replace(replaceDir, replaceWith)}'`),
+        fix: fixer => fixer.replaceTextRange(range, `'${replacedImportPath}'`),
       });
 
       break;
