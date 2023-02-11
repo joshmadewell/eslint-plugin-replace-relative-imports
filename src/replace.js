@@ -64,7 +64,8 @@ function evaluateImport(node, config, context) {
   const { source: { value, range, loc } } = node;
   if (value.startsWith('./') && config.replaceMethod === 'only-parent') {
     return;
-  } else if (!value.startsWith('../')) {
+  }
+  if (!value.startsWith('../') && !value.startsWith('./')) {
     return;
   }
 
